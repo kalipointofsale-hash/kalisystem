@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Telegram Mini App specific styles */
+:root {
+  --tg-bg-color: #ffffff;
+  --tg-text-color: #000000;
+  --tg-hint-color: #999999;
+  --tg-link-color: #0088cc;
+  --tg-button-color: #0088cc;
+  --tg-button-text-color: #ffffff;
+  --tg-secondary-bg-color: #f8f9fa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tg-bg-color: #1c1c1d;
+    --tg-text-color: #ffffff;
+    --tg-hint-color: #8e8e93;
+    --tg-link-color: #0088cc;
+    --tg-button-color: #0088cc;
+    --tg-button-text-color: #ffffff;
+    --tg-secondary-bg-color: #2c2c2e;
+  }
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Disable text selection and improve mobile experience */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Better button press animations */
+.active\\:scale-95:active {
+  transform: scale(0.95);
+}
